@@ -2,7 +2,7 @@ FROM node:alpine
 
 WORKDIR '/app'
 
-COPY package.json .
+COPY package.json ./
 RUN npm install
 # we may not need COPY . . as we have reference to the local machine in docker-compose.yml file
 COPY . .
